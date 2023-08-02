@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SearchBar.css";
 
 // eslint-disable-next-line react/prop-types
 function SearchBar({ onSubmit }) {
@@ -14,8 +15,9 @@ function SearchBar({ onSubmit }) {
   };
 
   return (
-    <div>
+    <div className="search-bar">
       <form onSubmit={handleFormSubmit}>
+        <label>Search here</label>
         <input value={term} onChange={handleChange} />
       </form>
     </div>
